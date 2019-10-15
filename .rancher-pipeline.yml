@@ -3,9 +3,6 @@ stages:
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: npm start
-  - runScriptConfig:
-      image: node:latest
       shellScript: |-
         npm install
         npm test
