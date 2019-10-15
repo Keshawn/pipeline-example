@@ -12,6 +12,11 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: rp-node-1107
+      pushRemote: true
       registry: 127.0.0.1:34098
+- name: deploy_stage
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
 timeout: 60
 notification: {}
