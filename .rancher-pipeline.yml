@@ -11,8 +11,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: rp-node-1058
-      pushRemote: true
+      tag: rp-node-1107
       registry: 127.0.0.1:34098
 timeout: 60
 notification: {}
