@@ -11,7 +11,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: rp-node-1107
+      tag: repo/my-image:dev
       pushRemote: true
       registry: 127.0.0.1:34098
 - name: deploy_stage
