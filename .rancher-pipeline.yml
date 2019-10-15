@@ -1,2 +1,21 @@
+stages:
+- name: test_stage
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm start
+  - runScriptConfig:
+      image: node:latest
+      shellScript: |-
+        npm install
+        npm test
+- name: package_stage
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: rp-node-1033
+      pushRemote: true
+      registry: 127.0.0.1:34098
 timeout: 60
 notification: {}
